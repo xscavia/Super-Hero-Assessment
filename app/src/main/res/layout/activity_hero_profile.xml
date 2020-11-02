@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/constraint_"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".superhero.activities.HeroProfile">
+
+  <com.google.android.material.appbar.AppBarLayout
+    android:id="@+id/general_appbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="100dp"
+    android:background="@null"
+    android:translationZ="0.1dp"
+    app:elevation="0dp"
+    app:layout_constraintBottom_toTopOf="@+id/imageView_hero"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbar_propertydetails"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageButton
+          android:id="@+id/back_arrow"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentStart="true"
+          android:layout_alignParentLeft="true"
+          android:layout_centerVertical="true"
+          android:background="@drawable/arrow"
+          android:onClick="onClick"
+          android:padding="6dp"
+          android:visibility="visible"
+          app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+          tools:ignore="VectorDrawableCompat" />
+
+      </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+  </com.google.android.material.appbar.AppBarLayout>
+
+
+  <ImageView
+    android:id="@+id/imageView_hero"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="fitStart" />
+
+  <LinearLayout
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="45dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+
+  <include layout="@layout/hero_profile_content" />
+</androidx.constraintlayout.widget.ConstraintLayout>

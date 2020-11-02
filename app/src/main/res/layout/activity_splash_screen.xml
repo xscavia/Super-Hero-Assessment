@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".superhero.activities.SplashScreen"
+  android:background="@color/primary_dark">
+
+  <RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="10dp"
+    android:orientation="vertical"
+    android:padding="16dp"
+    app:layout_constraintBottom_toTopOf="@+id/textView"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <TextView
+      android:id="@+id/dash_initials"
+      android:layout_width="130dp"
+      android:layout_height="130dp"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="10dp"
+      android:background="@drawable/circle_textview"
+      android:gravity="center_horizontal"
+      android:paddingTop="16dp"
+      android:textColor="@color/white"
+      android:textSize="18sp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+      android:id="@+id/image_profile"
+      android:layout_width="130dp"
+      android:layout_height="130dp"
+      android:scaleType="centerCrop"
+      android:layout_margin="10dp"
+      android:padding="8dp"
+      android:paddingTop="10dp"
+      android:src="@drawable/profilepic"/>
+
+  </RelativeLayout>
+
+
+
+  <TextView
+    android:id="@+id/textView3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="28dp"
+    android:text="@string/rights"
+    android:textSize="14sp"
+    style="@style/TextAppearance.MaterialComponents.Headline5"
+    android:textColor="@color/white"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent" />
+
+  <TextView
+    android:id="@+id/textView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="324dp"
+    android:text="@string/my_name"
+    android:textSize="24sp"
+    android:textColor="@color/white"
+    style="@style/TextAppearance.MaterialComponents.Headline5"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.497"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+    android:id="@+id/textView2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/resume_assessment"
+    android:textSize="24sp"
+    android:textColor="@color/white"
+    style="@style/TextAppearance.MaterialComponents.Headline5"
+    app:layout_constraintBottom_toTopOf="@+id/textView3"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.498"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView"
+    app:layout_constraintVertical_bias="0.027" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,805 @@
+<com.github.captain_miao.optroundcardview.OptRoundCardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:layout_marginTop="230dp"
+  app:layout_constraintBottom_toBottomOf="parent"
+  app:layout_constraintEnd_toEndOf="parent"
+  app:layout_constraintStart_toStartOf="parent"
+  app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+  app:optRoundCardBackgroundColor="@color/white"
+  app:optRoundCardCornerRadius="30dp"
+  app:optRoundCardElevation="0dp"
+  app:optRoundCardLeftBottomCorner="false"
+  app:optRoundCardLeftTopCorner="true"
+  app:optRoundCardRightBottomCorner="false"
+  app:optRoundCardRightTopCorner="true">
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <LinearLayout
+      android:id="@+id/linearLayoutt"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:padding="10dp">
+
+      <LinearLayout
+        android:id="@+id/power_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal">
+
+          <TextView
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Power Stats"
+            android:textColor="@color/light_chacoal" />
+        </LinearLayout>
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:orientation="horizontal"
+          android:weightSum="3">
+
+          <com.google.android.material.card.MaterialCardView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+              <TextView
+                android:id="@+id/intelligence"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:padding="30dp"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+              <TextView
+                android:id="@+id/intelligence_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="Intelligence"
+                android:textColor="@color/light_chacoal" />
+            </LinearLayout>
+
+          </com.google.android.material.card.MaterialCardView>
+
+          <com.google.android.material.card.MaterialCardView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+              <TextView
+                android:id="@+id/strength"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:padding="30dp"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+              <TextView
+                android:id="@+id/strength_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="Strength"
+                android:textColor="@color/light_chacoal" />
+            </LinearLayout>
+
+          </com.google.android.material.card.MaterialCardView>
+
+          <com.google.android.material.card.MaterialCardView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+              <TextView
+                android:id="@+id/speed"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:padding="30dp"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+              <TextView
+                android:id="@+id/speed_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="Speed"
+                android:textColor="@color/light_chacoal" />
+            </LinearLayout>
+
+          </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:orientation="horizontal"
+          android:weightSum="3">
+          <com.google.android.material.card.MaterialCardView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+              <TextView
+                android:id="@+id/durability"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:padding="30dp"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+              <TextView
+                android:id="@+id/durability_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="Durability"
+                android:textColor="@color/light_chacoal" />
+            </LinearLayout>
+
+          </com.google.android.material.card.MaterialCardView>
+
+          <com.google.android.material.card.MaterialCardView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+              <TextView
+                android:id="@+id/power"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:padding="30dp"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+              <TextView
+                android:id="@+id/power_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="Power"
+                android:textColor="@color/light_chacoal" />
+            </LinearLayout>
+
+          </com.google.android.material.card.MaterialCardView>
+
+          <com.google.android.material.card.MaterialCardView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+              <TextView
+                android:id="@+id/combat"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:padding="30dp"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+              <TextView
+                android:id="@+id/combat_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="Combat"
+                android:textColor="@color/light_chacoal" />
+            </LinearLayout>
+
+          </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+      </LinearLayout>
+
+
+      <LinearLayout
+        android:id="@+id/biography_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal">
+
+          <TextView
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Biography"
+            android:textColor="@color/light_chacoal" />
+        </LinearLayout>
+        <com.google.android.material.card.MaterialCardView
+          android:layout_width="match_parent"
+          android:layout_height="250dp"
+          android:layout_marginTop="10dp"
+          android:layout_marginBottom="10dp"
+          android:backgroundTint="@color/background_grey"
+          android:foreground="?android:attr/selectableItemBackground"
+          app:cardCornerRadius="10dp"
+          app:cardElevation="0dp"
+          app:cardUseCompatPadding="true">
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+              <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="8dp"
+                android:text="Name:"
+                android:textColor="@color/light_chacoal"
+                android:textSize="12sp" />
+
+              <TextView
+                android:id="@+id/Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="8dp"
+                android:textSize="12sp" />
+
+            </LinearLayout>
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+              <TextView
+                android:id="@+id/fullname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="8dp"
+                android:text="Full Name:"
+                android:textColor="@color/light_chacoal"
+                android:textSize="12sp" />
+
+              <TextView
+                android:id="@+id/fullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="8dp"
+                android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+              <TextView
+                android:id="@+id/alter_ego"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="8dp"
+                android:text="Alter Ego:"
+                android:textColor="@color/light_chacoal"
+                android:textSize="12sp" />
+
+              <TextView
+                android:id="@+id/alterEgos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="8dp"
+                android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+              <TextView
+                android:id="@+id/place_of_birth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="8dp"
+                android:text="Place Of Birth"
+                android:textColor="@color/light_chacoal"
+                android:textSize="12sp" />
+
+              <TextView
+                android:id="@+id/placeOfBirth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="8dp"
+                android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+              <TextView
+                android:id="@+id/publisher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="8dp"
+                android:text="Publisher"
+                android:textColor="@color/light_chacoal"
+                android:textSize="12sp" />
+
+              <TextView
+                android:id="@+id/publisher_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="8dp"
+                android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+              <TextView
+                android:id="@+id/alignment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="8dp"
+                android:text="Alignment:"
+                android:textColor="@color/light_chacoal"
+                android:textSize="12sp" />
+
+              <TextView
+                android:id="@+id/alignment_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="8dp"
+                android:textSize="12sp" />
+
+            </LinearLayout>
+          </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/appearance_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal">
+
+          <TextView
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Appearance"
+            android:textColor="@color/light_chacoal" />
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+          android:layout_width="match_parent"
+          android:layout_height="230dp"
+          android:layout_marginTop="10dp"
+          android:layout_marginBottom="10dp"
+          android:backgroundTint="@color/background_grey"
+          android:foreground="?android:attr/selectableItemBackground"
+          app:cardCornerRadius="10dp"
+          app:cardElevation="0dp"
+          app:cardUseCompatPadding="true">
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+              <TextView
+                android:id="@+id/Gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="8dp"
+                android:text="Gender:"
+                android:textColor="@color/light_chacoal"
+                android:textSize="12sp" />
+
+              <TextView
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="8dp"
+                android:textSize="12sp" />
+
+            </LinearLayout>
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+              <TextView
+                android:id="@+id/Race"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="8dp"
+                android:text="Race:"
+                android:textColor="@color/light_chacoal"
+                android:textSize="12sp" />
+
+              <TextView
+                android:id="@+id/race"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="8dp"
+                android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+              <TextView
+                android:id="@+id/Height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="8dp"
+                android:text="Height:"
+                android:textColor="@color/light_chacoal"
+                android:textSize="12sp" />
+
+              <TextView
+                android:id="@+id/height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="8dp"
+                android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+              <TextView
+                android:id="@+id/Weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="8dp"
+                android:text="Weight:"
+                android:textColor="@color/light_chacoal"
+                android:textSize="12sp" />
+
+              <TextView
+                android:id="@+id/weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="8dp"
+                android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+              <TextView
+                android:id="@+id/Eye"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="8dp"
+                android:text="Eye Color:"
+                android:textColor="@color/light_chacoal"
+                android:textSize="12sp" />
+
+              <TextView
+                android:id="@+id/eye_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="8dp"
+                android:textSize="12sp" />
+
+            </LinearLayout>
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+              <TextView
+                android:id="@+id/Hair"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="8dp"
+                android:text="Hair Color:"
+                android:textColor="@color/light_chacoal"
+                android:textSize="12sp" />
+
+              <TextView
+                android:id="@+id/hair_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="8dp"
+                android:textSize="12sp" />
+
+            </LinearLayout>
+          </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+      </LinearLayout>
+      <LinearLayout
+        android:id="@+id/connections_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal">
+
+          <TextView
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Affiliations"
+            android:textColor="@color/light_chacoal" />
+
+
+        </LinearLayout>
+        <TextView
+          android:id="@+id/group_affilation"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="10dp"
+          android:layout_marginEnd="5dp"
+          android:fontFamily="@font/roboto_light"
+          android:textColor="@color/light_chacoal"
+          android:textSize="14sp" />
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal">
+
+          <TextView
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Relatives"
+            android:textColor="@color/light_chacoal" />
+
+        </LinearLayout>
+
+        <TextView
+          android:id="@+id/relatives"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="10dp"
+          android:layout_marginEnd="5dp"
+          android:fontFamily="@font/roboto_light"
+          android:textColor="@color/light_chacoal"
+          android:textSize="14sp" />
+      </LinearLayout>
+  </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+</com.github.captain_miao.optroundcardview.OptRoundCardView>

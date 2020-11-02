@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/background_grey"
+  android:orientation="vertical">
+
+  <androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+
+    <LinearLayout
+      android:id="@+id/ll"
+      android:layout_width="match_parent"
+      android:layout_height="130dp"
+      android:background="@color/primary_dark"
+      android:gravity="center"
+      android:orientation="horizontal">
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+          style="@style/TextAppearance.MaterialComponents.Headline6"
+          android:layout_width="200dp"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical|end"
+          android:layout_margin="5dp"
+          android:layout_marginLeft="10dp"
+          android:layout_marginTop="-20dp"
+          android:fontFamily="@font/roboto_regular"
+          android:singleLine="false"
+          android:text="@string/my_name_surname"
+          android:textColor="@color/colorAccent" />
+
+        <TextView
+          android:id="@+id/today_date"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="5dp"
+          android:layout_marginTop="-20dp"
+          android:fontFamily="@font/roboto_light"
+          android:textColor="@color/white"
+          android:textSize="14sp" />
+      </LinearLayout>
+      <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+          android:id="@+id/dash_initials"
+          android:layout_width="60dp"
+          android:layout_height="60dp"
+          android:layout_marginStart="10dp"
+          android:layout_marginTop="0dp"
+          android:background="@drawable/circle_textview"
+          android:fontFamily="@font/roboto_medium"
+          android:gravity="center_horizontal"
+          android:paddingTop="18dp"
+          android:text="@string/initials"
+          android:textColor="@color/colorAccent"
+          android:textSize="18sp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+          android:id="@+id/image_profile"
+          android:layout_width="80dp"
+          android:layout_height="80dp" />
+
+      </RelativeLayout>
+
+
+    </LinearLayout>
+    <com.github.captain_miao.optroundcardview.OptRoundCardView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="110dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/ll"
+      app:optRoundCardBackgroundColor="#f0f0f0"
+      app:optRoundCardCornerRadius="20dp"
+      app:optRoundCardElevation="0dp"
+      app:optRoundCardLeftBottomCorner="false"
+      app:optRoundCardLeftTopCorner="true"
+      app:optRoundCardRightBottomCorner="false"
+      app:optRoundCardRightTopCorner="true">
+      <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+          android:id="@+id/linearLayout3"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+<!--          <RelativeLayout-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginEnd="3dp"-->
+<!--            android:layout_marginRight="3dp"-->
+<!--            android:layout_gravity="end"-->
+<!--            android:background="@drawable/spinner_background"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <TextView-->
+<!--              android:id="@+id/dialog_language"-->
+<!--              android:layout_width="match_parent"-->
+<!--              android:layout_height="match_parent"-->
+<!--              android:layout_alignParentBottom="true"-->
+<!--              android:layout_gravity="center"-->
+<!--              android:gravity="center"-->
+<!--              android:background="@android:color/transparent"-->
+<!--              android:dropDownVerticalOffset="35dp"-->
+<!--              android:popupBackground="@color/colorPrimary"-->
+<!--              android:textColor="@color/white"-->
+<!--              android:text="@string/select_language" />-->
+<!--            <ImageView-->
+<!--              android:layout_width="wrap_content"-->
+<!--              android:layout_height="wrap_content"-->
+<!--              android:layout_alignParentRight="true"-->
+<!--              android:layout_centerVertical="true"-->
+<!--              android:layout_gravity="center"-->
+<!--              android:layout_marginRight="10dp"-->
+<!--              android:src="@drawable/drop" />-->
+<!--          </RelativeLayout>-->
+          <TextView
+            android:id="@+id/objective"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="@string/objective_ttitle"
+            android:textColor="@color/light_chacoal" />
+          <TextView
+            android:id="@+id/objective1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/objective"
+            android:textColor="@color/light_chacoal"
+            android:textSize="14sp" />
+
+          <TextView
+            android:id="@+id/objective2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/objective2"
+            android:textColor="@color/light_chacoal"
+            android:textSize="14sp" />
+          <TextView
+            android:id="@+id/exp"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="@string/experience"
+            android:textColor="@color/light_chacoal" />
+          <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/background_grey"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
+            app:strokeColor="@color/colorAccent"
+            app:strokeWidth="1dp">
+            <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+              <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <View
+                  android:layout_width="6dp"
+                  android:layout_height="350dp"
+                  android:layout_marginLeft="0dp"
+                  android:background="@color/colorAccent" />
+              </LinearLayout>
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                  style="@style/TextAppearance.MaterialComponents.Headline6"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="10dp"
+                  android:layout_marginTop="20dp"
+                  android:text="October 2016- present Hospitality Technology International (HTI)"
+                  android:textColor="@color/light_chacoal" />
+                <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="10dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_medium"
+                  android:text="Software Developer"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+
+                <TextView
+                  android:id="@+id/brief"
+                  style="@style/TextAppearance.MaterialComponents.Headline4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="10dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_light"
+                  android:text="Primary responsibility is maintaining existing software and developing new features. "
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+                <TextView
+                  android:id="@+id/bullet"
+                  style="@style/TextAppearance.MaterialComponents.Headline4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_light"
+                  android:text="@string/bullet_one"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+                <TextView
+                  android:id="@+id/bullet_two"
+                  style="@style/TextAppearance.MaterialComponents.Headline4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_light"
+                  android:text="@string/bullet_two"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+                <TextView
+                  android:id="@+id/tech_stack"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="10dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_medium"
+                  android:text="@string/stack"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+
+                <com.google.android.material.chip.ChipGroup
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="10dp">
+
+                  <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gwt"
+                    app:chipBackgroundColor="@color/grey" />
+
+                  <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/intellij"
+                    app:chipBackgroundColor="@color/grey" />
+                  <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/git"
+                    app:chipBackgroundColor="@color/grey" />
+                  <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jira"
+                    app:chipBackgroundColor="@color/grey" />
+                  <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/java"
+                    app:chipBackgroundColor="@color/grey" />
+                  <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jersey"
+                    app:chipBackgroundColor="@color/grey" />
+                  <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zoho"
+                    app:chipBackgroundColor="@color/grey" />
+                  <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/android"
+                    app:chipBackgroundColor="@color/grey" />
+                  <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/retrofit"
+                    app:chipBackgroundColor="@color/grey" />
+                  <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Volley"
+                    app:chipBackgroundColor="@color/grey" />
+
+                </com.google.android.material.chip.ChipGroup>
+                <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="10dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_medium"
+                  android:text="Payment Gateway Integrations"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+                <com.google.android.material.chip.ChipGroup
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="10dp">
+                  <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mpesa"
+                    app:chipBackgroundColor="@color/grey" />
+
+                  <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/payment_gateway"
+                    app:chipBackgroundColor="@color/grey" />
+                </com.google.android.material.chip.ChipGroup>
+              </LinearLayout>
+            </RelativeLayout>
+          </com.google.android.material.card.MaterialCardView>
+
+          <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/background_grey"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
+            app:strokeColor="@color/colorAccent"
+            app:strokeWidth="1dp">
+            <RelativeLayout
+              android:id="@+id/relative"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+              <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <View
+                  android:id="@+id/view"
+                  android:layout_width="6dp"
+                  android:layout_height="350dp"
+                  android:layout_marginLeft="0dp"
+                  android:background="@color/colorAccent" />
+              </LinearLayout>
+              <LinearLayout
+                android:id="@+id/linearLayoutt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                  android:id="@+id/employer"
+                  style="@style/TextAppearance.MaterialComponents.Headline6"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="10dp"
+                  android:layout_marginTop="20dp"
+                  android:text="April 2015- April 2016 Mingle Business"
+                  android:textColor="@color/light_chacoal" />
+                <TextView
+                  android:id="@+id/job_descriptio"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="10dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_medium"
+                  android:text="Web developer and designer"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+
+                <TextView
+                  android:id="@+id/brief_two"
+                  style="@style/TextAppearance.MaterialComponents.Headline4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="10dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_light"
+                  android:text="@string/brief"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+                <TextView
+                  android:id="@+id/bullet_three"
+                  style="@style/TextAppearance.MaterialComponents.Headline4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_light"
+                  android:text="@string/develop_both_back_end_and_front_end"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+                <TextView
+                  android:id="@+id/bullet_four"
+                  style="@style/TextAppearance.MaterialComponents.Headline4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_light"
+                  android:text="@string/database_and_user_interface_integration"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+                <TextView
+                  android:id="@+id/bullet_five"
+                  style="@style/TextAppearance.MaterialComponents.Headline4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_light"
+                  android:text="@string/building_cross_browser_and_platform_including_mobile"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+                <TextView
+                  android:id="@+id/bullet_six"
+                  style="@style/TextAppearance.MaterialComponents.Headline4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_light"
+                  android:text="@string/responsive_development_mobile_first_dev"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+                <TextView
+                  android:id="@+id/bullet_seven"
+                  style="@style/TextAppearance.MaterialComponents.Headline4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_light"
+                  android:text="@string/managing_and_manipulation_of_databases_using_mysql"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+                <TextView
+                  android:id="@+id/bullet_eight"
+                  style="@style/TextAppearance.MaterialComponents.Headline4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_light"
+                  android:text="@string/provide_support_and_handling_queries"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+                <TextView
+                  android:id="@+id/bullet_nine"
+                  style="@style/TextAppearance.MaterialComponents.Headline4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_light"
+                  android:text="@string/manage_web_hosting_uploading_and_email_setup"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+                <TextView
+                  android:id="@+id/tech_stack_two"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="10dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_medium"
+                  android:text="@string/stack"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+
+                <com.google.android.material.chip.ChipGroup
+                  android:id="@+id/chipGroup"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="10dp">
+
+                  <com.google.android.material.chip.Chip
+                    android:id="@+id/chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PHP"
+                    app:chipBackgroundColor="@color/grey" />
+
+                  <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HTML5"
+                    app:chipBackgroundColor="@color/grey" />
+                  <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/git"
+                    app:chipBackgroundColor="@color/grey" />
+                  <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/css3"
+                    app:chipBackgroundColor="@color/grey" />
+                  <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/javascript"
+                    app:chipBackgroundColor="@color/grey" />
+                  <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mysql"
+                    app:chipBackgroundColor="@color/grey" />
+                  <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/atom"
+                    app:chipBackgroundColor="@color/grey" />
+
+                </com.google.android.material.chip.ChipGroup>
+
+              </LinearLayout>
+            </RelativeLayout>
+          </com.google.android.material.card.MaterialCardView>
+
+          <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/background_grey"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
+            app:strokeColor="@color/colorAccent"
+            app:strokeWidth="1dp">
+            <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+              <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <View
+                  android:layout_width="6dp"
+                  android:layout_height="350dp"
+                  android:layout_marginLeft="0dp"
+                  android:background="@color/colorAccent" />
+              </LinearLayout>
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                  style="@style/TextAppearance.MaterialComponents.Headline6"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="10dp"
+                  android:layout_marginTop="20dp"
+                  android:text="@string/_2014_october_2015_april_cranswick_computing_business_solutions_lonehill"
+                  android:textColor="@color/light_chacoal" />
+                <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="10dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_medium"
+                  android:text="@string/junior_warehouse_management_system_consultant"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+
+
+                <TextView
+                  android:id="@+id/bullet_ten"
+                  style="@style/TextAppearance.MaterialComponents.Headline4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_light"
+                  android:text="@string/front_end_and_back_end_support"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+                <TextView
+                  android:id="@+id/bullet_eleven"
+                  style="@style/TextAppearance.MaterialComponents.Headline4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_light"
+                  android:text="@string/management_studio_and_hand_held_devices"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+                <TextView
+                  android:id="@+id/bullet_twelve"
+                  style="@style/TextAppearance.MaterialComponents.Headline4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_light"
+                  android:text="@string/warehouse_consulting_and_wms_sql_queries"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+                <TextView
+                  android:id="@+id/bullet_thirten"
+                  style="@style/TextAppearance.MaterialComponents.Headline4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_light"
+                  android:text="@string/hand_held_terminal_configurations"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+                <TextView
+                  android:id="@+id/bullet_fourteen"
+                  style="@style/TextAppearance.MaterialComponents.Headline4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_light"
+                  android:text="@string/barcode_labeling_and_printing"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+                <TextView
+                  android:id="@+id/bullet_fifteen"
+                  style="@style/TextAppearance.MaterialComponents.Headline4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_light"
+                  android:text="@string/end_user_training_and_support"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+
+              </LinearLayout>
+            </RelativeLayout>
+          </com.google.android.material.card.MaterialCardView>
+
+          <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/background_grey"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
+            app:strokeColor="@color/colorAccent"
+            app:strokeWidth="1dp">
+            <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+              <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <View
+                  android:layout_width="6dp"
+                  android:layout_height="350dp"
+                  android:layout_marginLeft="0dp"
+                  android:background="@color/colorAccent" />
+              </LinearLayout>
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                  style="@style/TextAppearance.MaterialComponents.Headline6"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="10dp"
+                  android:layout_marginTop="20dp"
+                  android:text="2014 	Hitachi Data System	Bryanston"
+                  android:textColor="@color/light_chacoal" />
+                <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="10dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_medium"
+                  android:text="@string/junior_warehouse_management_system_consultant"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+
+
+                <TextView
+                  android:id="@+id/bullet_sixteen"
+                  style="@style/TextAppearance.MaterialComponents.Headline4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_light"
+                  android:text="@string/a_lite_internship_program_hosted_by_velisa_africa"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+                <TextView
+                  android:id="@+id/bullet_seventeen"
+                  style="@style/TextAppearance.MaterialComponents.Headline4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_light"
+                  android:text="@string/hitachi_data_system_qualified_associate_storage_concept"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+                <TextView
+                  android:id="@+id/bullet_eighteen"
+                  style="@style/TextAppearance.MaterialComponents.Headline4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_light"
+                  android:text="@string/developed_a_products_inventory_system_php_html_css_javascript"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+                <TextView
+                  android:id="@+id/bullet_twenty"
+                  style="@style/TextAppearance.MaterialComponents.Headline4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_light"
+                  android:text="@string/android_development_using_mit_app_inventor"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+                <TextView
+                  android:id="@+id/bullet_twenty_one"
+                  style="@style/TextAppearance.MaterialComponents.Headline4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_light"
+                  android:text="@string/digital_marketing"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+                <TextView
+                  android:id="@+id/twenty_two"
+                  style="@style/TextAppearance.MaterialComponents.Headline4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:fontFamily="@font/roboto_light"
+                  android:text="@string/year_end_java_project_student_portal"
+                  android:textColor="@color/light_chacoal"
+                  android:textSize="14sp" />
+
+              </LinearLayout>
+            </RelativeLayout>
+          </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+      </androidx.core.widget.NestedScrollView>
+    </com.github.captain_miao.optroundcardview.OptRoundCardView>
+
+
+  </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

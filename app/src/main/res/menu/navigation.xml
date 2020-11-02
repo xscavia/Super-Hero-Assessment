@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <item
+    android:id="@+id/navigation_home"
+    android:icon="@drawable/ic_twotone_work"
+    android:title="@string/resume" />
+
+
+  <item
+    android:id="@+id/navigation_heros"
+    android:icon="@drawable/ic_iron_man"
+    android:title="@string/avengers" />
+
+<!--  <item-->
+<!--    android:id="@+id/navigation_attribution"-->
+<!--    android:icon="@drawable/ic_twotone_attributions"-->
+<!--    android:title="@string/attributions" />-->
+
+</menu>

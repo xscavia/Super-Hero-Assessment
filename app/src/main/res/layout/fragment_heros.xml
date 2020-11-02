@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/constraint"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/background_grey"
+  android:orientation="vertical">
+
+  <androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+
+    <LinearLayout
+      android:id="@+id/ll"
+      android:layout_width="match_parent"
+      android:layout_height="130dp"
+      android:background="@color/primary_dark"
+      android:gravity="center"
+      android:orientation="horizontal">
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="5dp">
+        <TextView
+          style="@style/TextAppearance.MaterialComponents.Headline4"
+          android:layout_width="200dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:fontFamily="@font/roboto_regular"
+          android:singleLine="false"
+          android:gravity="center_horizontal"
+          android:text="@string/avengers"
+          android:textColor="@color/white" />
+      </LinearLayout>
+
+    </LinearLayout>
+    <com.github.captain_miao.optroundcardview.OptRoundCardView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="110dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/ll"
+      app:optRoundCardBackgroundColor="#f0f0f0"
+      app:optRoundCardCornerRadius="20dp"
+      app:optRoundCardElevation="0dp"
+      app:optRoundCardLeftBottomCorner="false"
+      app:optRoundCardLeftTopCorner="true"
+      app:optRoundCardRightBottomCorner="false"
+      app:optRoundCardRightTopCorner="true">
+      <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+          style="@style/TextAppearance.MaterialComponents.Headline6"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:padding="10dp"
+          android:text="My Favourite Heros"
+          android:textColor="@color/light_chacoal" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="10dp"
+          android:layout_marginEnd="5dp"
+          android:fontFamily="@font/roboto_light"
+          android:text="@string/description"
+          android:textColor="@color/light_chacoal"
+          android:textSize="14sp" />
+
+<!--        <include-->
+<!--          android:id="@+id/shimmerCharacters"-->
+<!--          layout="@layout/image_load_shimmer" />-->
+
+        <HorizontalScrollView
+          android:id="@+id/horizontalScroll"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="10dp"
+          android:layout_marginTop="10dp"
+          android:animateLayoutChanges="true"
+          android:scrollbars="none">
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <com.google.android.material.card.MaterialCardView
+              android:id="@+id/batman"
+              android:layout_width="200dp"
+              android:layout_height="380dp"
+              android:layout_margin="5dp"
+              android:clickable="true"
+              android:focusable="true"
+              android:onClick="onClick"
+              app:cardCornerRadius="8dp"
+              app:cardElevation="2dp">
+              <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                  android:id="@+id/image_one"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:scaleType="centerCrop" />
+                <ImageView
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_alignParentBottom="true"
+                  android:scaleType="centerCrop"
+                  android:src="@drawable/shadow_bottom_to_top" />
+                <TextView
+                  android:id="@+id/character_one"
+                  style="@style/TextAppearance.MaterialComponents.Headline5"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true"
+                  android:layout_margin="15dp"
+                  android:textColor="@color/white" />
+              </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+              android:id="@+id/wolverine"
+              android:layout_width="200dp"
+              android:layout_height="380dp"
+              android:layout_margin="5dp"
+              android:clickable="true"
+              android:focusable="true"
+              android:onClick="onClick"
+              app:cardCornerRadius="8dp"
+              app:cardElevation="2dp">
+              <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                  android:id="@+id/image_two"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:scaleType="centerCrop" />
+                <ImageView
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_alignParentBottom="true"
+                  android:scaleType="centerCrop"
+                  android:src="@drawable/shadow_bottom_to_top" />
+                <TextView
+                  android:id="@+id/character_two"
+                  style="@style/TextAppearance.MaterialComponents.Headline5"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true"
+                  android:layout_margin="15dp"
+                  android:textColor="@color/white" />
+              </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+              android:id="@+id/superman"
+              android:layout_width="200dp"
+              android:layout_height="380dp"
+              android:layout_margin="5dp"
+              android:clickable="true"
+              android:focusable="true"
+              android:onClick="onClick"
+              app:cardCornerRadius="8dp"
+              app:cardElevation="2dp">
+              <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                  android:id="@+id/image_three"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:scaleType="centerCrop" />
+                <ImageView
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_alignParentBottom="true"
+                  android:scaleType="centerCrop"
+                  android:src="@drawable/shadow_bottom_to_top" />
+                <TextView
+                  android:id="@+id/character_three"
+                  style="@style/TextAppearance.MaterialComponents.Headline5"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true"
+                  android:layout_margin="15dp"
+                  android:textColor="@color/white" />
+              </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+              android:id="@+id/iron_man"
+              android:layout_width="200dp"
+              android:layout_height="380dp"
+              android:layout_margin="5dp"
+              android:clickable="true"
+              android:focusable="true"
+              android:onClick="onClick">
+              <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                  android:id="@+id/image_four"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:scaleType="centerCrop" />
+                <ImageView
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_alignParentBottom="true"
+                  android:scaleType="centerCrop"
+                  android:src="@drawable/shadow_bottom_to_top" />
+                <TextView
+                  android:id="@+id/character_four"
+                  style="@style/TextAppearance.MaterialComponents.Headline5"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true"
+                  android:layout_margin="15dp"
+                  android:textColor="@color/white" />
+              </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+              android:id="@+id/hulk"
+              android:layout_width="200dp"
+              android:layout_height="380dp"
+              android:layout_margin="5dp"
+              android:clickable="true"
+              android:focusable="true"
+              android:onClick="onClick">
+              <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                  android:id="@+id/image_five"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:scaleType="centerCrop" />
+                <ImageView
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_alignParentBottom="true"
+                  android:scaleType="centerCrop"
+                  android:src="@drawable/shadow_bottom_to_top" />
+                <TextView
+                  android:id="@+id/character_five"
+                  style="@style/TextAppearance.MaterialComponents.Headline5"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true"
+                  android:layout_margin="15dp"
+                  android:textColor="@color/white" />
+              </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+          </LinearLayout>
+        </HorizontalScrollView>
+
+      </LinearLayout>
+    </com.github.captain_miao.optroundcardview.OptRoundCardView>
+
+  </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
